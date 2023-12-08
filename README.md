@@ -6,7 +6,7 @@
 <h3> Paul Palomo  </h3>
 <h3> Misael Vidaurre  </h3>
 <h3> Mario Guemes  </h3>
-<h3> Luis Calatayud   </h3>
+<h3> Luis Calatayud </h3>
 <h3> Facundo Garcia   </h3>
 
 
