@@ -1,8 +1,8 @@
 <h1 align="center"> Menu Digital </h1>
-<h2> Este es una tiene de comida online que tiene como modalidad autoservicio </h2>
 
+<p> Esta es una tienda de comida onlina que le ofrese al cliente la posibilidad de ver y seleccionar los productos que desea y elegir las formas de pagos mas convenientes para el. </p>
 <h2> Sobre el equipo </h2>
-<a> Milena Gallardo </a>
+<h2> Milena Gallardo  </h2>
 <h2> Paul Palomo  </h2>
 <h2> Misael Vidaurre  </h2>
 <h2> Mario Guemes  </h2>
