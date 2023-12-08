@@ -11,10 +11,10 @@
 
 <H2 align="center"> Modelos de sitios en los que nos basamos </H2>
 
-| Sitio Web     | Razón para la selección|
-| ------------- | -----------------------|
-|Behance	|Elegido por la estética presentada.|
-|McDonald's Argentina|	Clientes a los que apuntan y por su estética atractiva.|
-|Starbucks Perú eCommerce|	Seleccionado por las funcionalidades implementadas.|
-|Mostaza	|Ejemplo por su enfoque en comida rápida y su plataforma web.|
-|Rappi Argentina | Elegido por su diseño atractivo y moderno, así como por su amplia gama de funcionalidades. |
+| Sitio Web                 | Razón para la selección                                     |
+| ------------------------- | ----------------------------------------------------------- |
+| Behance                   | Elegido por la estética presentada.                          |
+| McDonald's Argentina      | Clientes a los que apuntan y por su estética atractiva.      |
+| Starbucks Perú eCommerce  | Seleccionado por las funcionalidades implementadas.          |
+| Mostaza                   | Ejemplo por su enfoque en comida rápida y su plataforma web. |
+| Rappi Argentina           | Elegido por su diseño atractivo y moderno, así como por su amplia gama de funcionalidades. |
