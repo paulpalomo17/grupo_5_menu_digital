@@ -8,9 +8,9 @@
 <h3> Luis Calatayud </h3>
 <h3> Facundo Garcia   </h3>
 
-## Audiencia Objetivo
+<h1 align="center"> Audiencia Objetivo</h1>
 
-Nuestra audiencia objetivo está compuesta por:
+<p>Nuestra audiencia objetivo está compuesta por: </p>
 
 - **Jóvenes y Adultos Activos:** Personas con estilos de vida ocupados que buscan comidas rápidas y deliciosas.
 - **Familias:** Opciones convenientes para familias en movimiento o que desean disfrutar de una comida rápida juntos.
