@@ -8,13 +8,18 @@
 <h3> Luis Calatayud </h3>
 <h3> Facundo Garcia   </h3>
 
-<h1 align="center"> Audiencia Objetivo</h1>
+<h2 align="center"> Audiencia Objetivo</h2>
 
 <p>Nuestra audiencia objetivo está compuesta por: </p>
 
 - **Jóvenes y Adultos Activos:** Personas con estilos de vida ocupados que buscan comidas rápidas y deliciosas.
 - **Familias:** Opciones convenientes para familias en movimiento o que desean disfrutar de una comida rápida juntos.
 - **Clientes en Busca de Variedad:** Personas que buscan opciones variadas y personalizables para satisfacer sus gustos individuales.
+
+<h2 align="center">Ajuste a la Audiencia</h2>
+
+<p>Nos enfocamos en ofrecer una experiencia rápida y satisfactoria, proporcionando opciones de comidas rápidas de calidad que se ajustan a diferentes estilos de vida. Nuestro menú diverso y opciones personalizables nos permiten atender a una audiencia amplia, desde jóvenes en movimiento hasta familias que buscan opciones variadas para todos los gustos.</p>
+
 
 <h2 align="center">Modelos de sitios en los que nos basamos</h2>
 
