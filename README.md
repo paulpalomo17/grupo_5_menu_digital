@@ -1,7 +1,7 @@
 <h1 align="center"> Menu Digital </h1>
 <p> Esta es una tienda de comida onlina que le ofrese al cliente la posibilidad de ver y seleccionar los productos que desea y elegir las formas de pagos mas convenientes para el. </p>
 <h2> Sobre el equipo </h2>
-<h3> Milena Gallardo  </h3>
+<h3> Milena Gallardo:Soy una estudiante de tercer año de Ingeniería en Informática y cursante del segundo año de la Tecnicatura en Desarrollo de Software. Mi pasión por la tecnología se refleja en mi experiencia con diversos lenguajes de programación (Python, Java, Javascript, C, entre otros) y en mi habilidad para trabajar con bases de datos relacionales y no relacionales. Además, me destaco en el diseño gráfico, utilizando herramientas como Illustrator, Photoshop y Figma. Mi objetivo es fusionar mis habilidades técnicas y mi creatividad para contribuir con soluciones innovadoras en el mundo del desarrollo de software.</h3>
 <h3> Paul Palomo  </h3>
 <h3> Misael Vidaurre  </h3>
 <h3> Mario Guemes  </h3>
