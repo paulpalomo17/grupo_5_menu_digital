@@ -1,5 +1,4 @@
 <h1 align="center"> Menu Digital </h1>
-
 <p> Esta es una tienda de comida onlina que le ofrese al cliente la posibilidad de ver y seleccionar los productos que desea y elegir las formas de pagos mas convenientes para el. </p>
 <h2> Sobre el equipo </h2>
 <h3> Milena Gallardo  </h3>
@@ -8,6 +7,14 @@
 <h3> Mario Guemes  </h3>
 <h3> Luis Calatayud </h3>
 <h3> Facundo Garcia   </h3>
+
+## Audiencia Objetivo
+
+Nuestra audiencia objetivo está compuesta por:
+
+- **Jóvenes y Adultos Activos:** Personas con estilos de vida ocupados que buscan comidas rápidas y deliciosas.
+- **Familias:** Opciones convenientes para familias en movimiento o que desean disfrutar de una comida rápida juntos.
+- **Clientes en Busca de Variedad:** Personas que buscan opciones variadas y personalizables para satisfacer sus gustos individuales.
 
 <h2 align="center">Modelos de sitios en los que nos basamos</h2>
 
