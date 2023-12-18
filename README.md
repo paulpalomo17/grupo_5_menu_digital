@@ -2,8 +2,8 @@
 <p> Esta es una tienda de comida onlina que le ofrese al cliente la posibilidad de ver y seleccionar los productos que desea y elegir las formas de pagos mas convenientes para el. </p>
 <h2> Sobre el equipo </h2>
 <p><strong>Milena Gallardo:</strong>Soy una estudiante de tercer año de Ingeniería en Informática y cursante del segundo año de la Tecnicatura en Desarrollo de Software. Mi pasión por la tecnología se refleja en mi experiencia con diversos lenguajes de programación (Python, Java, Javascript, C, entre otros) y en mi habilidad para trabajar con bases de datos relacionales y no relacionales. Además, me destaco en el diseño gráfico, utilizando herramientas como Illustrator, Photoshop y Figma. Mi objetivo es fusionar mis habilidades técnicas y mi creatividad para contribuir con soluciones innovadoras en el mundo del desarrollo de software.</p> 
+<p><strong>Misael Vidaurre:</strong>Soy una estudiante de 1 año de Ingeniería en Informática y Analista Programador. Tengo conocimientos en las siguientes tecnologías Lenguajes de programacion: Python, Java, Javascript, C, Base de datos: Sql, Oracle. Considero que me adapto fácilmente a nuevas tecnologias y aprendo rápido a manejar un nuevo software.</p> 
 <h3> Paul Palomo  </h3>
-<h3> Misael Vidaurre  </h3>
 <h3> Mario Guemes  </h3>
 <h3> Luis Calatayud </h3>
 <h3> Facundo Garcia   </h3>
