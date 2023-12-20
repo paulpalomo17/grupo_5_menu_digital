@@ -7,7 +7,6 @@
 <h3> Mario Guemes  </h3>
 <h3> Luis Calatayud </h3>
 <p><strong>Facundo Garcia </strong> Soy un estudiandte e tercer año de la tecnicatura superior en desarrollo de sofwhare, tengo conocimientos basicos en el desarrollo web, manejo de bases de datos relacionesles, tengo conocimientos basicos en lo que es el diseño y el analisis de sistemas</p>
-<a src = "https://www.figma.com/file/ddOZ67rpSl6r3wZDi8Plu1/Untitled?type=design&node-id=0-1&mode=design"> Un Boceto de la pagina </a>
 
 <h2 align="center"> Audiencia Objetivo</h2>
 
