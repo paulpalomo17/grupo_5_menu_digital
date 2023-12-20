@@ -31,3 +31,4 @@
 | Starbucks Perú eCommerce  | Seleccionado por las funcionalidades implementadas.          |
 | Mostaza                   | Ejemplo por su enfoque en comida rápida y su plataforma web. |
 | Rappi Argentina           | Elegido por su diseño atractivo y moderno, así como por su amplia gama de funcionalidades. |
+<a src = "https://www.figma.com/file/ddOZ67rpSl6r3wZDi8Plu1/Untitled?type=design&node-id=0-1&mode=design"> Un Boceto de la pagina </a>
