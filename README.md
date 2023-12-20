@@ -31,4 +31,5 @@
 | Mostaza                   | Ejemplo por su enfoque en comida rápida y su plataforma web. |
 | Rappi Argentina           | Elegido por su diseño atractivo y moderno, así como por su amplia gama de funcionalidades. |
 
-<h2 align="center">Link Wireframe de las páginas: https://www.figma.com/file/ddOZ67rpSl6r3wZDi8Plu1/Untitled?type=design&node-id=0%3A1&mode=design&t=ZAMCSVgsKAIgFdx1-1</h2>
+<h2 align="center">Link Wireframe de las páginas</h2>
+<p>https://www.figma.com/file/ddOZ67rpSl6r3wZDi8Plu1/Untitled?type=design&node-id=0%3A1&mode=design&t=ZAMCSVgsKAIgFdx1-1</p>
