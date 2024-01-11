@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD | Carrito</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img class="logo" src="/images/logo.png" alt="Imagen de logo" class="logo">
+        </div>
+    </header>
+    <div class="container-progress">
+        <ul>
+            <li>
+                <p class="text">Orden</p>
+                <div class="active progress one">
+                    <p>1</p>
+                    <i class="uil fa-solid fa-check"></i>
+                </div>
+            </li>
+            <li>
+                <p class="text">Pago</p>
+                <div class="active progress two">
+                    <p>2</p>
+                    <i class="uil fa-solid fa-check"></i>
+                </div>
+            </li>
+            <li>
+                <p class="text">Confirmacion</p>
+                <div class="progress three">
+                    <p>3</p>
+                    <i class="uil fa-solid fa-check"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+ 
+
+    <table>
+        <tr>
+          <th>Comida</th>
+          <th class="cantidad-col">Cantidad</th>
+          <th class="precio-col">Precio</th>
+          <th></th>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <img src="/images/hamburguesa.jpg" alt="hamburguesa" style="width: 10%;">
+                    <p>Suprema con papas</p>
+                </div>
+            </td>
+            <td>
+                <select name="cantidad">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </td>
+            <td>$ 2.550</td>
+            <td><a><i class="fa-solid fa-square-xmark"></i></a></td>
+        </tr>
+        <tr>
+            <td>
+            <div>
+                <img src="/images/hamburguesa.jpg" alt="hamburguesa" style="width: 10%;">
+                <p>Pizza especial</p>
+            </div>
+            </td>
+            <td>
+                <select name="cantidad">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </td>
+            <td>$ 2.000</td>
+            <td><a><i class="fa-solid fa-square-xmark"></i></a></td>
+        </tr>
+      </table>
+        <div class="contenedor-subtotal">
+            <p>Subtotal</p>
+            <p class="total">$ 4.550</p>
+        </div>
+        <div class="control-boton">
+            <button type="submit" class="boton-cart">Continuar</button>
+        </div>
+    <footer>
+        <img class="logo" src="/images/logo.png" alt="Imagen de logo" class="logo">
+        <div class="container-ubi">
+            <h3>Ubicacion</h3>
+            <iframe class="ubicacion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.9099865019584!2d-65.29717945252249!3d-24.1876561638403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5c9f0b4601%3A0xd851fa6781c86e59!2sS%C3%A1nchez%20de%20Bustamante%20175%2C%20San%20Salvador%20de%20Jujuy%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1700224938623!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div>
+            <h3>Contacto</h3>
+            <div class="redes">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <p>menudigital@gmail.com</p>
+            <p>+5438857450</p>
+        </div>
+    </footer>
+</body>
+</html>
