@@ -33,3 +33,6 @@
 
 <h2 align="center">Link Wireframe de las páginas</h2>
 <p>https://www.figma.com/file/ddOZ67rpSl6r3wZDi8Plu1/Untitled?type=design&node-id=0%3A1&mode=design&t=ZAMCSVgsKAIgFdx1-1</p>
+
+<h2 align="center">Link de El tablero de Trabajo</h2>
+<p>https://trello.com/b/3VvwmQom/proyecto</p>
