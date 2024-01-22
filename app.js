@@ -2,35 +2,21 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+app.set('view engine', 'ejs')
 
 const publicPath =  path.resolve(__dirname, './public'); 
 
 app.use( express.static(publicPath) );
+const mainRoutes = require('./routes/mainRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 app.listen(3000, () =>{
     console.log('Servidor corriendo en el puerto 3000...');
 });
 
-app.get('/', (req,res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'));
-})
+app.use('/', mainRoutes)
+app.use('/detalle', mainRoutes)
+app.use('/carrito', mainRoutes)
+app.use('/home', mainRoutes)
 
-app.get('/detail', (req,res) => {
-    res.sendFile(path.join(__dirname, './views/productDetail.html'));
-})
-
-app.post('/home', (req,res) => {
-    res.redirect("/");
-})
-
-app.get('/register', (req,res) => {
-    res.sendFile(path.join(__dirname, './views/register.html'));
-})
-
-app.get('/login', (req,res) => {
-    res.sendFile(path.join(__dirname, './views/login.html'));
-})
-
-app.get('/carrito', (req,res) => {
-    res.sendFile(path.join(__dirname, './views/productCart.html'));
-})
+app.use('/user', userRoutes)
