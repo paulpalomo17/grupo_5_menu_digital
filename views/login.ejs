@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD | Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
-</head>
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Login'}) %>
 <body>
-    <header class="main-header">
-        <div class="main-header-top-bar">
-            <img class="logo" src="/images/logo.png" alt="Imagen de logo" class="logo">
-        </div>
-    </header>
+    <!-- Header -->
+	<%- include('partials/headerNavbar', {title: 'Login'}) %>
+	<!-- /Header -->
     <section class="main-form">
         <div class="form-img">
             <img src="/images/hamburguesa-register.jpg" alt="logo-hamburguesa">
@@ -57,24 +50,8 @@
             </form>
         </div>
     </section>
-    <footer>
-        <div>
-            <img class="logo" src="/images/logo.png" alt="Imagen de logo" class="logo">
-        </div>
-        <div class="container-ubi">
-            <h3>Ubicacion</h3>
-            <iframe class="ubicacion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.9099865019584!2d-65.29717945252249!3d-24.1876561638403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5c9f0b4601%3A0xd851fa6781c86e59!2sS%C3%A1nchez%20de%20Bustamante%20175%2C%20San%20Salvador%20de%20Jujuy%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1700224938623!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div>
-            <h3>Contacto</h3>
-            <div class="redes">
-                <i class="fa-brands fa-square-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-youtube"></i>
-            </div>
-            <p>menudigital@gmail.com</p>
-            <p>+5438857450</p>
-        </div>
-    </footer>
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
 </body>
 </html>
