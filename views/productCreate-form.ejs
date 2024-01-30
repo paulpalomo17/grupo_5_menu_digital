@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Creacion'}) %>
+<body>
+    <!-- Header -->
+	<%- include('partials/headerNavbar', {title: 'Creacion'}) %>
+	<!-- /Header -->
+    <section class="main-create-form">
+        <div class="form">
+            <h2>Formulario de creación de producto</h2>
+            <!-- Formulario -->
+            <form action="/home" method="POST" class="create-form" id="create-form"> 
+                <div class="control-form">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" minlength="3" maxlength="20" class="control" placeholder="Ej: Pizza doble queso"> 
+                </div>
+                <div class="control-form">
+                    <label for="descripcion">Descripción</label>
+					<textarea name="descripcion" id="descripcion" class="control"></textarea>
+                </div>
+                <div class="control-form">
+                    <label for="image">Seleccionar una imagen para el producto</label>
+                    <input type="file" name="image" accept=".jpg, .png">
+                </div>
+                <div class="control-form">
+                    <label for="categoria">Categoría</label>
+                    <select name="categoria" id="categoria" class="control">
+                        <option value="">Elegí</option>
+                        <option value="oferta">En oferta</option>
+                        <option value="popular">Populares</option>
+                        <option value="nuevo">Nuevos</option>
+                        <option value="promo">Promo</option>
+                    </select>
+                </div>
+                <div class="control-form">
+                    <label for="precio">Precio</label>
+                    <input type="text" id="precio" name="precio" placeholder="Ej: 5678" class="control">
+                </div>
+                <div class="control-boton">
+                    <button type="submit" class="boton-form">Guardar producto</button>
+                </div>  
+            </form>
+        </div>
+    </section>
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+</html>

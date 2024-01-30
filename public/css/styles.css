@@ -413,6 +413,38 @@ table i{
     font-size: 15px;
 }
 
+.main-create-form{
+    max-width: 500px;
+    margin: auto;
+    padding-top: 15px;
+}
+
+.main-create-form h2{
+    text-align: center;
+}
+
+.main-create-form div{
+    margin-bottom: 15px; 
+}
+
+.control-form textarea{
+    height: 70px;
+}
+
+.main-edit-form{
+    max-width: 500px;
+    margin: auto;
+    padding-top: 15px;
+}
+
+.main-edit-form h2{
+    text-align: center;
+}
+
+.main-edit-form div{
+    margin-bottom: 15px; 
+}
+
 @media (min-width: 361px){ /*tablet*/
     .product{
         width: 30%
