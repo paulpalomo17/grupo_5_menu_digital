@@ -6,36 +6,37 @@
     <!-- Header -->
 	<%- include('partials/headerNavbar', {title: 'Inicio'}) %>
 	<!-- /Header -->
-    <h1>Probá uno de estos platos</h1>
+    <h1>Los más Populares</h1>
+    <!-- Populares -->
     <section class="main">
-        <article class="product">
-            <a class="enlace" href="/products/detalle">
-                <img src="/images/hamburguesa.jpg" alt="hamburguesa">
-                <div class="produc-atrib-box">
-                    <h5>Suprema con papas</h5>
-                    <p class="precio">$ 2.550</p>
-                </div>
-            </a>
-        </article>
-        <article class="product">
-            <a class="enlace" href="/products/detalle">
-                <img src="/images/pizza.png" alt="pizza">
-                <div class="produc-atrib-box">
-                    <h5>Pizza especial</h5>
-                    <p class="precio">$ 2.000</p>
-                </div>
-            </a>
-        </article>
-        <article class="product">
-            <a class="enlace" href="/products/detalle">
-                <img src="/images/empanadas-pollo.jpg" alt="empanada-pollo">
-                <div class="produc-atrib-box">
-                    <h5>Empanadas al horno de pollo</h5>
-                    <p class="precio">$ 3.000</p>
-                </div>
-            </a>
-        </article>
+        <% productPopular.forEach(productP => { %>
+            <article class="product">
+                <a class="enlace" href="/products/detalle">
+                    <img src="/images/<%= productP.image %>" alt="imagen de producto">
+                    <div class="produc-atrib-box">
+                        <h5><%= productP.name %></h5>
+                        <p class="precio">$ <%= toThousand(productP.price) %></p>
+                    </div>
+                </a>
+            </article>
+        <% }) %>	
     </section>
+    <h1>Novedades</h1>
+    <!-- Nuevos -->
+    <section class="main">
+        <% productNuevo.forEach(productN => { %>
+            <article class="product">
+                <a class="enlace" href="/products/detalle">
+                    <img src="/images/<%= productN.image %>" alt="imagen de producto">
+                    <div class="produc-atrib-box">
+                        <h5><%= productN.name %></h5>
+                        <p class="precio">$ <%= toThousand(productN.price) %></p>
+                    </div>
+                </a>
+            </article>
+        <% }) %>	
+    </section>
+
     <section class="about">
         <h3>SOBRE NOSOTROS</h3>
         <p>Esta es una tienda de comida online que le ofrece al cliente la posibilidad de ver y seleccionar los productos que desea y elegir las formas de pagos mas convenientes para él.

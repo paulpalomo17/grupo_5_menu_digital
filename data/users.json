@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "firstName": "Juan",
+        "lastName": "Pérez",
+        "email": "juan.perez@example.com",
+        "password": "password123",
+        "category": "admin",
+        "image": "user-default.png"
+    },
+    {
+        "id": 2,
+        "firstName": "María",
+        "lastName": "González",
+        "email": "maria.gonzalez@example.com",
+        "password": "securePassword456",
+        "category": "user",
+        "image": "user-default.png"
+    },
+    {
+        "id": 3,
+        "firstName": "Carlos",
+        "lastName": "López",
+        "email": "carlos.lopez@example.com",
+        "password": "myStrongPassword789",
+        "category": "admin",
+        "image": "user-default.png"
+    },
+    {
+        "id": 4,
+        "firstName": "Ana",
+        "lastName": "Martínez",
+        "email": "ana.martinez@example.com",
+        "password": "anaSecure123",
+        "category": "user",
+        "image": "user-default.png"
+    },
+    {
+        "id": 5,
+        "firstName": "Roberto",
+        "lastName": "Fernández",
+        "email": "roberto.fernandez@example.com",
+        "password": "robertoPass789",
+        "category": "admin",
+        "image": "user-default.png"
+    },
+    {
+        "id": 6,
+        "firstName": "Luisa",
+        "lastName": "Jiménez",
+        "email": "luisa.jimenez@example.com",
+        "password": "luisaPassword456",
+        "category": "admin",
+        "image": "user-default.png"
+    },
+    {
+        "id": 7,
+        "firstName": "Pedro",
+        "lastName": "Ramírez",
+        "email": "pedro.ramirez@example.com",
+        "password": "pedrosGreatPass234",
+        "category": "user",
+        "image": "user-default.png"
+    },
+    {
+        "id": 8,
+        "firstName": "Sofía",
+        "lastName": "García",
+        "email": "sofia.garcia@example.com",
+        "password": "sofiasNewPass567",
+        "category": "user",
+        "image": "user-default.png"
+    }
+]

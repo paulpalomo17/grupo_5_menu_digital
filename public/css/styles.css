@@ -531,6 +531,14 @@ table i{
         width: 26%;
     }
 
+    .product h5{
+        font-size: 20px;
+    }
+
+    .product .precio{
+        font-size: 18px;
+    }
+
     .main-form{
         display: flex;
         flex-wrap: wrap;
