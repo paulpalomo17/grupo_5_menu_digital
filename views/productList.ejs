@@ -10,8 +10,8 @@
     <section class="main">
         <% products.forEach(product => { %>
             <article class="product">
-                <a class="enlace" href="/products/detalle">
-                    <img src="/images/<%= product.image %>" alt="imagen de producto">
+                <a class="enlace" href="/products/detail/<%= product.id %>">
+                    <img src="/images/products/<%= product.image %>" alt="imagen de producto">
                     <div class="produc-atrib-box">
                         <h5><%= product.name %></h5>
                         <p class="precio">$ <%= toThousand(product.price) %></p>

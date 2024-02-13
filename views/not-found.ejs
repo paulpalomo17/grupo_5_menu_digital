@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Error'}) %>
+<style>
+    .contenedor{
+        text-align: center;
+        justify-content: center;
+        padding: 25px;
+        margin: auto;
+    }
+    h1{
+        text-align: center;
+        font-size: 40px;
+    }
+    .enlace{
+        margin-top: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+    a{
+        background-color: rgb(176, 62, 62);
+        border-radius: 10px;
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+    }
+</style>
+<body>
+    <!-- Header -->
+	<%- include('partials/headerNavbar', {title: 'Inicio'}) %>
+	<!-- /Header -->
+    <div class="contenedor">
+        <img src="/images/error-404.jpg" alt="imagen-error">
+        <h1>Oppps! Algo salio mal...</h1>
+        <h3>La página que estabas buscando no existe</h3>
+        <div class="enlace">
+            <a href="/">Volver al inicio</a>
+        </div>
+    </div>
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+</html>

@@ -4,26 +4,25 @@
 <%- include('partials/head', {title: 'Detalle'}) %>
 <body>
     <article class="product-detail">
-        <img src="/images/hamburguesa.jpg" alt="hamburguesa">
+        <img src="/images/products/<%= product.image %>" alt="image-product">
         <div class="box-detail-top">
-            <h3>Suprema con papas</h3>
-            <p class="precio">$ 2.550</p>
+            <h3>Detalle del producto: <%= product.name %></h3>
+            <p class="precio">$ <%= toThousand(product.price) %></p>
         </div>
         <div class="box-detail-center">
-            <h4>Contiene</h4>
-            <ul>
-                <li>1 Carne</li>
-                <li>Cheddar</li>
-                <li>Tocino</li>
-                <li>Salsa golf</li>
-                <li>Mayonesa</li>
-                <li>Papas fritas</li>
-            </ul>
+            <h4>Descripción:</h4>
+            <%= product.description %>
         </div>
         <div class="box-detail-buttom">
             <form action="/home" method="POST" id="login-form"> 
                 <button type="submit" class="boton-form">Agregar al carrito</button>
             </form>
+            <div class="box-buttons">
+                <a href="/products/<%= product.id %>/edit">Editar</a>
+                <form action="/products/<%= product.id %> ?_method=DELETE" method="POST">
+                    <button type="submit" class="boton-form-delete">Eliminar</button>
+                </form>
+            </div>
         </div>
     </article>
 </body>

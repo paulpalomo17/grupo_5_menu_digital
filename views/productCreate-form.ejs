@@ -10,32 +10,42 @@
         <div class="form">
             <h2>Formulario de creación de producto</h2>
             <!-- Formulario -->
-            <form action="/home" method="POST" class="create-form" id="create-form"> 
+            <form action="/products" method="POST" enctype="multipart/form-data" class="create-form" id="create-form"> 
                 <div class="control-form">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" id="name" minlength="3" maxlength="20" class="control" placeholder="Ej: Pizza doble queso"> 
                 </div>
                 <div class="control-form">
-                    <label for="descripcion">Descripción</label>
-					<textarea name="descripcion" id="descripcion" class="control"></textarea>
+                    <label for="description">Descripción</label>
+					<textarea name="description" id="description" class="control"></textarea>
                 </div>
                 <div class="control-form">
                     <label for="image">Seleccionar una imagen para el producto</label>
                     <input type="file" name="image" accept=".jpg, .png">
                 </div>
                 <div class="control-form">
-                    <label for="categoria">Categoría</label>
-                    <select name="categoria" id="categoria" class="control">
+                    <label for="category">Categoría</label>
+                    <select name="category" id="category" class="control">
                         <option value="">Elegí</option>
-                        <option value="oferta">En oferta</option>
                         <option value="popular">Populares</option>
                         <option value="nuevo">Nuevos</option>
-                        <option value="promo">Promo</option>
+                    </select>
+                </div>
+                <div class="control-form">
+                    <label for="type">Tipo</label>
+                    <select name="type" id="type" class="control">
+                        <option value="">Elegí</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="hamburguesa">Hamburguesa</option>
+                        <option value="acompañamiento">Acompañamiento</option>
+                        <option value="comida mexicana">Comida Mexicana</option>
+                        <option value="comida oriental">Comida Oriental</option>
+                        <option value="postre">Postre</option>
                     </select>
                 </div>
                 <div class="control-form">
                     <label for="precio">Precio</label>
-                    <input type="text" id="precio" name="precio" placeholder="Ej: 5678" class="control">
+                    <input type="text" id="price" name="price" placeholder="Ej: 5678" class="control">
                 </div>
                 <div class="control-boton">
                     <button type="submit" class="boton-form">Guardar producto</button>

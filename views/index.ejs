@@ -11,8 +11,8 @@
     <section class="main">
         <% productPopular.forEach(productP => { %>
             <article class="product">
-                <a class="enlace" href="/products/detalle">
-                    <img src="/images/<%= productP.image %>" alt="imagen de producto">
+                <a class="enlace" href="/products/detail/<%= productP.id %>">
+                    <img src="/images/products/<%= productP.image %>" alt="imagen de producto">
                     <div class="produc-atrib-box">
                         <h5><%= productP.name %></h5>
                         <p class="precio">$ <%= toThousand(productP.price) %></p>
@@ -26,8 +26,8 @@
     <section class="main">
         <% productNuevo.forEach(productN => { %>
             <article class="product">
-                <a class="enlace" href="/products/detalle">
-                    <img src="/images/<%= productN.image %>" alt="imagen de producto">
+                <a class="enlace" href="/products/detail/<%= productN.id %>">
+                    <img src="/images/products/<%= productN.image %>" alt="imagen de producto">
                     <div class="produc-atrib-box">
                         <h5><%= productN.name %></h5>
                         <p class="precio">$ <%= toThousand(productN.price) %></p>
