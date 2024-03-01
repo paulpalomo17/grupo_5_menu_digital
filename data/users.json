@@ -4,7 +4,7 @@
   "firstName": "Juan",
   "lastName": "Pérez",
   "email": "juan.perez@example.com",
-  "password": "password123",
+  "password": "$2a$10$YpRgJb/st4ogcyONECkRxOCAicDolZZVRdgE/6qR.tbEi9mPZnuuK",
   "category": "admin",
   "image": "default-image-user.png"
  },
@@ -13,7 +13,7 @@
   "firstName": "María",
   "lastName": "González",
   "email": "maria.gonzalez@example.com",
-  "password": "securePassword456",
+  "password": "$2a$10$7iLKJ/rAYjJshJwUseXshOtwZrojYLps4jgu7g/FUljIe/w9AACzC",
   "category": "member",
   "image": "default-image-user.png"
  },
@@ -22,7 +22,7 @@
   "firstName": "Carlos",
   "lastName": "López",
   "email": "carlos.lopez@example.com",
-  "password": "myStrongPassword789",
+  "password": "$2a$10$TBuFfJfWaDveovntBMx/v.OQGcpM./d24r52dISZOnaeS3o74E6vu",
   "category": "admin",
   "image": "default-image-user.png"
  },
@@ -31,7 +31,7 @@
   "firstName": "Ana",
   "lastName": "Martínez",
   "email": "ana.martinez@example.com",
-  "password": "anaSecure123",
+  "password": "$2a$10$aUGj2fWiOmzO3hjRq9iw.eF3lebNPsNI/P5MAYLYwZyNxXXsQoq/y",
   "category": "member",
   "image": "default-image-user.png"
  },
@@ -40,7 +40,7 @@
   "firstName": "Roberto",
   "lastName": "Fernández",
   "email": "roberto.fernandez@example.com",
-  "password": "robertoPass789",
+  "password": "$2a$10$YpRgJb/st4ogcyONECkRxOCAicDolZZVRdgE/6qR.tbEi9mPZnuuK",
   "category": "admin",
   "image": "default-image-user.png"
  },
@@ -49,7 +49,7 @@
   "firstName": "Luisa",
   "lastName": "Jiménez",
   "email": "luisa.jimenez@example.com",
-  "password": "luisaPassword456",
+  "password": "$2a$10$w2F1sAJQU11oOm4VrX9i0OGMrl8PqiPUxBsMqzKtRQ9.bkipXdAee",
   "category": "admin",
   "image": "default-image-user.png"
  },
@@ -58,7 +58,7 @@
   "firstName": "Pedro",
   "lastName": "Ramírez",
   "email": "pedro.ramirez@example.com",
-  "password": "pedrosGreatPass234",
+  "password": "$2a$10$bSxp37tdy7KhUaPDRFDIHOK8OTnrJjPBdBp.5fgINrIScNHHRefx2",
   "category": "member",
   "image": "default-image-user.png"
  },
@@ -67,7 +67,7 @@
   "firstName": "Sofía",
   "lastName": "García",
   "email": "sofia.garcia@example.com",
-  "password": "sofiasNewPass567",
+  "password": "$2a$10$DYpYgbecTI8CZX.ShS5rzOAi0J5ejU63glMVa9vdIoQk/U7VtExZe",
   "category": "member",
   "image": "default-image-user.png"
  }

@@ -5,6 +5,7 @@ const path = require('path');
 const router = express.Router()
 
 const userControllers = require('../controllers/userController')
+const loggedMiddleware = require('../middlewares/loggedMiddleware')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -20,9 +21,16 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 /*** CREATE ONE USER ***/
-router.get('/register', userControllers.register)
+router.get('/register', loggedMiddleware, userControllers.register)
 router.post('/', upload.single('image'), userControllers.store); 
 
-router.get('/login', userControllers.login)
+/*** FORMULARIO DE LOGIN ***/
+router.get('/login', loggedMiddleware, userControllers.login)
+
+/*** PROCESAR EL LOGIN ***/
+router.post('/login', userControllers.loginProcess)
+
+/*** LOGOUT ***/
+router.get('/logout', userControllers.logout)
 
 module.exports = router

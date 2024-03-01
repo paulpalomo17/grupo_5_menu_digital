@@ -5,6 +5,7 @@ const path = require('path');
 const router = express.Router()
 
 const productController = require('../controllers/productController')
+const authMiddleware = require('../middlewares/authMiddleware')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -21,7 +22,7 @@ const upload = multer({ storage })
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productController.list); 
-router.get('/carrito', productController.carrito)
+router.get('/carrito',authMiddleware , productController.carrito)
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productController.detail); 
