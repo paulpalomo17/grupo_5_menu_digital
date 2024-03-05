@@ -13,39 +13,73 @@
             <form action="/products" method="POST" enctype="multipart/form-data" class="create-form" id="create-form"> 
                 <div class="control-form">
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" minlength="3" maxlength="20" class="control" placeholder="Ej: Pizza doble queso"> 
+                    <input type="text" name="name" id="name" class="control" placeholder="Ej: Pizza doble queso" value="<%= locals.oldData ? oldData.name : null %>"> 
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                            <%= errors.name.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="control-form">
                     <label for="description">Descripción</label>
-					<textarea name="description" id="description" class="control"></textarea>
+					<textarea name="description" id="description" class="control"><%= locals.oldData ? oldData.description : null %></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="text-danger">
+                            <%= errors.description.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="control-form">
                     <label for="image">Seleccionar una imagen para el producto</label>
                     <input type="file" name="image" accept=".jpg, .png">
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="text-danger">
+                            <%= errors.image.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="control-form">
                     <label for="category">Categoría</label>
                     <select name="category" id="category" class="control">
                         <option value="">Elegí</option>
-                        <option value="popular">Populares</option>
-                        <option value="nuevo">Nuevos</option>
+                        <% let categories = ['Popular', 'Nuevo']%>
+                        <% for( const oneCategory of categories ) { %>
+                            <option value="<%= oneCategory %>" 
+                            <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>    
+                            ><%= oneCategory %></option>
+                        <% } %>
                     </select>
+                    <% if (locals.errors && errors.category) { %>
+                        <div class="text-danger">
+                            <%= errors.category.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="control-form">
                     <label for="type">Tipo</label>
                     <select name="type" id="type" class="control">
                         <option value="">Elegí</option>
-                        <option value="pizza">Pizza</option>
-                        <option value="hamburguesa">Hamburguesa</option>
-                        <option value="acompañamiento">Acompañamiento</option>
-                        <option value="comida mexicana">Comida Mexicana</option>
-                        <option value="comida oriental">Comida Oriental</option>
-                        <option value="postre">Postre</option>
+                        <% let types = ['Pizza', 'Hamburguesa', 'Acompañamiento', 'Comida Mexicana', 'Comida Oriental', 'Postre']%>
+                        <% for( const oneType of types ) { %>
+                            <option value="<%= oneType %>" 
+                            <%= locals.oldData && (oneType === oldData.type) ? 'selected' : null %>    
+                            ><%= oneType %></option>
+                        <% } %>
                     </select>
+                    <% if (locals.errors && errors.type) { %>
+                        <div class="text-danger">
+                            <%= errors.type.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="control-form">
                     <label for="precio">Precio</label>
-                    <input type="text" id="price" name="price" placeholder="Ej: 5678" class="control">
+                    <input type="text" id="price" name="price" placeholder="Ej: 5678" class="control" value="<%= locals.oldData ? oldData.price : null %>">
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="text-danger">
+                            <%= errors.price.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="control-boton">
                     <button type="submit" class="boton-form">Guardar producto</button>

@@ -1,0 +1,128 @@
+.main-edit-form img{
+    width: 50%;
+    height: 150px;
+}
+
+.control-form-img{
+    text-align: center;
+}
+
+.control-form-img label{
+    margin-bottom: 5px;
+    display: block; 
+    padding-bottom: 2px;
+    text-align: start;
+}
+
+                <div class="control-checkbox">
+                    <input type="checkbox" name="terminos" id="terminos">
+                    <label for="terminos">Acepto los términos y condiciones.</label>
+                </div>
+
+min 45 explica como hacer cuando se ingresa un correo que ya existe 
+min 51 login
+min 1:34 como pasar datos de un usario logueado para que se vean sus cosas
+min 1.36 recordar
+
+ <%= locals.errors && errors.email ? 'is-invalid' : null %>
+
+[
+ {
+  "id": 1,
+  "firstName": "Juan",
+  "lastName": "Pérez",
+  "email": "juan.perez@example.com",
+  "password": "password123",
+  "category": "admin",
+  "image": "default-image-user.png"
+ },
+ {
+  "id": 2,
+  "firstName": "María",
+  "lastName": "González",
+  "email": "maria.gonzalez@example.com",
+  "password": "securePassword456",
+  "category": "member",
+  "image": "default-image-user.png"
+ },
+ {
+  "id": 3,
+  "firstName": "Carlos",
+  "lastName": "López",
+  "email": "carlos.lopez@example.com",
+  "password": "myStrongPassword789",
+  "category": "admin",
+  "image": "default-image-user.png"
+ },
+ {
+  "id": 4,
+  "firstName": "Ana",
+  "lastName": "Martínez",
+  "email": "ana.martinez@example.com",
+  "password": "anaSecure123",
+  "category": "member",
+  "image": "default-image-user.png"
+ },
+ {
+  "id": 5,
+  "firstName": "Roberto",
+  "lastName": "Fernández",
+  "email": "roberto.fernandez@example.com",
+  "password": "robertoPass789",
+  "category": "admin",
+  "image": "default-image-user.png"
+ },
+ {
+  "id": 6,
+  "firstName": "Luisa",
+  "lastName": "Jiménez",
+  "email": "luisa.jimenez@example.com",
+  "password": "luisaPassword456",
+  "category": "admin",
+  "image": "default-image-user.png"
+ },
+ {
+  "id": 7,
+  "firstName": "Pedro",
+  "lastName": "Ramírez",
+  "email": "pedro.ramirez@example.com",
+  "password": "pedrosGreatPass234",
+  "category": "member",
+  "image": "default-image-user.png"
+ },
+ {
+  "id": 8,
+  "firstName": "Sofía",
+  "lastName": "García",
+  "email": "sofia.garcia@example.com",
+  "password": "sofiasNewPass567",
+  "category": "member",
+  "image": "default-image-user.png"
+ }
+]
+
+
+        if (userBuscado){
+            let correctPassword = bcrypt.compareSync(req.body.password, userBuscado.password);
+            if(correctPassword){
+                req.session.usuarioLogueado = userBuscado;
+                res.redirect('/')
+            }else{
+                res.render('login', {
+                    errors: {
+                        credecial: {
+                            msg: 'Credenciales invalidas'
+                        }
+                    }
+                });
+                res.render('login');
+            }
+        }else{
+            res.render('login', {
+                errors: {
+                    credecial: {
+                        msg: 'No se encuentra este email en nuestra base de datos'
+                    }
+                }
+          
+Subo implementacion de login de usuarios mediante middlewares y session, tambien se implete rutas de huespedes y de usuarios para proteger las rutas accesibles con o sin login

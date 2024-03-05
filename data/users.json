@@ -5,7 +5,7 @@
   "lastName": "Pérez",
   "email": "juan.perez@example.com",
   "password": "$2a$10$YpRgJb/st4ogcyONECkRxOCAicDolZZVRdgE/6qR.tbEi9mPZnuuK",
-  "category": "admin",
+  "category": "Admin",
   "image": "default-image-user.png"
  },
  {
@@ -14,7 +14,7 @@
   "lastName": "González",
   "email": "maria.gonzalez@example.com",
   "password": "$2a$10$7iLKJ/rAYjJshJwUseXshOtwZrojYLps4jgu7g/FUljIe/w9AACzC",
-  "category": "member",
+  "category": "Member",
   "image": "default-image-user.png"
  },
  {
@@ -23,7 +23,7 @@
   "lastName": "López",
   "email": "carlos.lopez@example.com",
   "password": "$2a$10$TBuFfJfWaDveovntBMx/v.OQGcpM./d24r52dISZOnaeS3o74E6vu",
-  "category": "admin",
+  "category": "Admin",
   "image": "default-image-user.png"
  },
  {
@@ -32,7 +32,7 @@
   "lastName": "Martínez",
   "email": "ana.martinez@example.com",
   "password": "$2a$10$aUGj2fWiOmzO3hjRq9iw.eF3lebNPsNI/P5MAYLYwZyNxXXsQoq/y",
-  "category": "member",
+  "category": "Member",
   "image": "default-image-user.png"
  },
  {
@@ -41,7 +41,7 @@
   "lastName": "Fernández",
   "email": "roberto.fernandez@example.com",
   "password": "$2a$10$YpRgJb/st4ogcyONECkRxOCAicDolZZVRdgE/6qR.tbEi9mPZnuuK",
-  "category": "admin",
+  "category": "Admin",
   "image": "default-image-user.png"
  },
  {
@@ -50,7 +50,7 @@
   "lastName": "Jiménez",
   "email": "luisa.jimenez@example.com",
   "password": "$2a$10$w2F1sAJQU11oOm4VrX9i0OGMrl8PqiPUxBsMqzKtRQ9.bkipXdAee",
-  "category": "admin",
+  "category": "Admin",
   "image": "default-image-user.png"
  },
  {
@@ -59,7 +59,7 @@
   "lastName": "Ramírez",
   "email": "pedro.ramirez@example.com",
   "password": "$2a$10$bSxp37tdy7KhUaPDRFDIHOK8OTnrJjPBdBp.5fgINrIScNHHRefx2",
-  "category": "member",
+  "category": "Member",
   "image": "default-image-user.png"
  },
  {
@@ -68,7 +68,7 @@
   "lastName": "García",
   "email": "sofia.garcia@example.com",
   "password": "$2a$10$DYpYgbecTI8CZX.ShS5rzOAi0J5ejU63glMVa9vdIoQk/U7VtExZe",
-  "category": "member",
+  "category": "Member",
   "image": "default-image-user.png"
  }
 ]

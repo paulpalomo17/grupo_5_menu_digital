@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -7,28 +8,38 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productControllers = {
+    // List - Listado de todos los productos
     list:(req,res) => {
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.render('productList', {products: products, toThousand});
     },
-    // Detail - Detail from one product
+    // Detail - Detalle de un producto
 	detail: (req, res) => {
         const productBuscado = products.find(product => {
             return product.id == req.params.id;
         })
 		res.render('productDetail', {product : productBuscado, toThousand});
 	},
+    // Carrito de compras
     carrito:(req,res) => {
         res.render('productCart');
     },
-    // Create - Form to create
+    // Create - Formulario de creacion de producto
     create: (req, res) => {
         res.render('productCreate-form');
     },
-
-    // Create -  Method to store
+    // Create -  Metodo de almacenamiento de un producto
     store: (req, res) => {
-        const newProduct = { //armado de nuevo producto
+		//Validaciones de campos
+		const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){ // Si hay errores
+            return res.render('productCreate-form', {
+                errors : resultValidation.mapped(),
+                oldData : req.body
+            });
+        }
+
+        const newProduct = { //Armado de nuevo producto
             id: Date.now(),
             name: req.body.name,
             description: req.body.description,
@@ -46,26 +57,26 @@ const productControllers = {
         res.redirect('/products')
     },
 
-    // Update - Form to edit
+    // Update - Formulario de edicion de producto
 	edit: (req, res) => {
+        //Busqueda de producto
 		const productBuscado = products.find(product => {
             return product.id == req.params.id;
         })
-        //console.log(productBuscado)
 		res.render('productEdit-form', {productToEdit : productBuscado});
 	},
-	// Update - Method to update
+	// Update - Metodo de edicion de un producto
 	update: (req, res) => {
 		//Obtener el id del producto a editar
 		let id = req.params.id
 		//Buscamos el producto a editar con ese id
 		let productEdit = products.find(product => product.id == id);
-		//si lo encuentra
-		if(productEdit){
+		
+		if(productEdit){ //si lo encuentra
 			productEdit.name = req.body.name || productEdit.name
             productEdit.description = req.body.description || productEdit.description
             productEdit.image = req.file?.filename || productEdit.image
-            productEdit.category = req.body.category || productEdit.category
+            productEdit.category = req.body.category,
             productEdit.type = req.body.type || productEdit.type
 			productEdit.price = req.body.price || productEdit.price
 			//convertir a json y sobreescribir de productos
@@ -77,7 +88,7 @@ const productControllers = {
 			res.send('El producto a editar no existe')
 		}
 	},
-    // Delete - Delete one product from DB
+    // Delete - Eliminacion de un producto
 	delete : (req, res) => {
 		//Obtener el id del producto
 		let id = req.params.id;
@@ -88,7 +99,6 @@ const productControllers = {
 		}
 		//Quitar producto deseado
 		products = products.filter(product => product.id != id)
-		//console.log(products)
 		//Convertir a json el listado actualizado
 		products = JSON.stringify(products, null, 2);
 		//Re-escribir el json

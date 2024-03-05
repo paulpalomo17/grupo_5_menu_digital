@@ -35,6 +35,11 @@
     top: 5px;
 }
 
+.text-danger {
+    color: rgb(184, 43, 43);
+    font-weight: bold;
+}
+
 .menu-horizontal{
     list-style: none;
     display: flex;

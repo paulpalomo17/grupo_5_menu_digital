@@ -4,8 +4,8 @@
     "name": "Pizza Margaritaaaaaa",
     "description": "Nuestra deliciosa pizza margarita esta formada por una masa de pizza napolitana como base y acompañada por 6 ingredientes solamente. Tan sencillo como un poco de tomate, queso mozzarella, albahaca fresca, sal, pimienta negra recién molida y aceite de oliva virgen extra. Es sin duda la pizza más popular.",
     "image": "pizza-margarita.png",
-    "category": "popular",
-    "type": "pizza",
+    "category": "Popular",
+    "type": "Pizza",
     "price": "1800"
   },
   {
@@ -13,8 +13,8 @@
     "name": "Pizza de Pepperoni",
     "description": "Nuestra deliciosa pizza de pepperoni está hecha con una base de salsa de tomate, mozzarella y pepperoni, un tipo de salami curado hecho a base de carne de cerdo y de vaca mezclados y sazonados con pimentón.",
     "image": "pizza-pepperoni.png",
-    "category": "nuevo",
-    "type": "pizza",
+    "category": "Nuevo",
+    "type": "Pizza",
     "price": 1500
   },
   {
@@ -22,8 +22,8 @@
     "name": "Pizza Clasica",
     "description": "Nuestra deliciosa pizza clasica esta formada con una masa la cual es crujiente, tanto en su base como en sus bordes conntiene los ingredicentes basicos como el queso y la salsa de tomate.",
     "image": "pizza-clasica.jpg",
-    "category": "popular",
-    "type": "pizza",
+    "category": "Popular",
+    "type": "Pizza",
     "price": 1400
   },
   {
@@ -31,8 +31,8 @@
     "name": "Hamburguesa Clasica",
     "description": "Nuestra hamburguesa clásica es más que un simple plato, es una celebración de la calidad y la tradición. Hemos perfeccionado nuestra receta para ofrecerte una hamburguesa que destaca por su sencillez y su sabor excepcional. Contiene pan, 1 carne de res, lechuga, tomate, queso y salsa",
     "image": "hamburguesa-clasica.jpg",
-    "category": "popular",
-    "type": "hamburguesa",
+    "category": "Popular",
+    "type": "Hamburguesa",
     "price": 1800
   },
   {
@@ -40,8 +40,8 @@
     "name": "Hamburguesa Suprema",
     "description": "Nuestra deliciosa hamburguesa suprema es infaltable en tu pedido esta delicia contiene pan, 1 Carne de res, cheddar, tocino, salsa golf y mayonesa, no incluye las papas fritas mostradas en la foto",
     "image": "hamburguesa.jpg",
-    "category": "popular",
-    "type": "hamburguesa",
+    "category": "Popular",
+    "type": "Hamburguesa",
     "price": 2500
   },
   {
@@ -49,8 +49,8 @@
     "name": "Hamburguesa Vegetariana",
     "description": "Nuestra deliciosa hamburguesa vegetariana es una variante de la hamburguesa tradicional que evita la carne picada para emplear productos vegetales idóneos para los vegetarianos o veganos. Contiene avena, remolacha y lentejas y ceunta con 15g de proteína por hamburguesa, y 0% colesterol.",
     "image": "hamburguesa-vegana.png",
-    "category": "nuevo",
-    "type": "hamburguesa",
+    "category": "Nuevo",
+    "type": "Hamburguesa",
     "price": 2000
   },
   {
@@ -58,8 +58,8 @@
     "name": "Papas Fritas",
     "description": "Es un acompañamiento habitual en las comidas rapidas que consiste en verduras cortadas a dados de pequeño tamaño que son sumamente deliciosas",
     "image": "papas-fritas.jpg",
-    "category": "popular",
-    "type": "acompañamiento",
+    "category": "Popular",
+    "type": "Acompañamiento",
     "price": 1500
   },
   {
@@ -67,8 +67,8 @@
     "name": "Aros de Cebolla",
     "description": "Es un acompañamiento que consiste en cebollas cortadas transversalmente para que se puedan poner en forma de anillo que son rebozados en harina con algo de levadura y posteriormente son fritos en aceite, indispensables en tus comidas",
     "image": "aros-cebolla.jpg",
-    "category": "nuevo",
-    "type": "acompañamiento",
+    "category": "Nuevo",
+    "type": "Acompañamiento",
     "price": 1300
   },
   {
@@ -76,8 +76,8 @@
     "name": "Tacos",
     "description": "Nuestros deliciosos tacos consisten en una tortilla de maíz, carne picada, pimiento rojo, pimiento verde, ajo, salsa de tomate y limón. En el pedido llegan 2 unidades",
     "image": "tacos.jpg",
-    "category": "popular",
-    "type": "comida mexicana",
+    "category": "Popular",
+    "type": "Comida Mexicana",
     "price": 2000
   },
   {
@@ -85,8 +85,8 @@
     "name": "Burrito",
     "description": "Nuestro delicioso burrito mexicano de carne picada es un plato típico de las fronteras de México. El mismo contiene aceite, cebolla blanca, pimientos verdes, pimientos rojos y carne picada",
     "image": "burrito.jpg",
-    "category": "popular",
-    "type": "comida mexicana",
+    "category": "Popular",
+    "type": "Comida Mexicana",
     "price": 2500
   },
   {
@@ -94,9 +94,9 @@
     "name": "Rollitos de Primavera",
     "description": "En Menu Digital te ofrecemos una sabrosa mezcla de verduras frescas envueltas en una fina y crujiente masa según la auténtica receta del lejano Oriente. Déjate seducir por el exotismo de los Rollitos de Primavera con su deliciosa salsa agridulce y descubrirás una forma diferente de comer verduras",
     "image": "rollitos-primavera.jpg",
-    "category": "nuevo",
-    "type": "comida oriental",
-    "price": 3000
+    "category": "Nuevo",
+    "type": "Comida Oriental",
+    "price": "3000"
   },
   {
     "id": 12,
@@ -104,7 +104,7 @@
     "description": "En Menu Digital, nos enorgullece llevar a tu mesa la autenticidad y el sabor de los dumplings asiáticos. Cada uno de nuestros dumplings es una obra de arte culinaria, preparada con dedicación y los ingredientes más frescos.",
     "image": "dumplings.jpg",
     "category": "",
-    "type": "comida oriental",
+    "type": "Comida Oriental",
     "price": 3300
   },
   {
@@ -112,8 +112,8 @@
     "name": "Sushi",
     "description": "En Menu Digital, llevamos la experiencia del sushi a otro nivel. Nuestra pasión por la gastronomía japonesa se refleja en cada rollo que preparamos, combinando tradición y creatividad para ofrecerte una experiencia culinaria inolvidable. Utilizamos solo los ingredientes más frescos, seleccionando cuidadosamente cada pieza de pescado y vegetal para garantizar la máxima calidad y sabor.",
     "image": "sushi.jpg",
-    "category": "popular",
-    "type": "comida oriental",
+    "category": "Popular",
+    "type": "Comida Oriental",
     "price": 4000
   },
   {
@@ -121,8 +121,8 @@
     "name": "Helado de Vainilla",
     "description": "En Menu Digital, creemos que la simplicidad es la forma más pura de perfección. Por eso, nuestro helado de vainilla está hecho para capturar la esencia de este sabor clásico, utilizando ingredientes de la más alta calidad y un proceso de elaboración artesanal que garantiza una textura cremosa y un sabor rico que se destaca en cada bocado.",
     "image": "helado-vainilla.jpg",
-    "category": "nuevo",
-    "type": "postre",
+    "category": "Nuevo",
+    "type": "Postre",
     "price": 2000
   },
   {
@@ -130,8 +130,8 @@
     "name": "Brownie de Chocolate",
     "description": "En Menu Digital, elevamos el brownie de chocolate a nuevas alturas de placer. Cada uno de nuestros brownies es una obra maestra de sabor, creada con una mezcla especial de chocolates premium y horneada a la perfección para lograr ese balance ideal entre un exterior crujiente y un interior suave y húmedo que se derrite en tu boca.",
     "image": "brownie.jpg",
-    "category": "",
-    "type": "postre",
-    "price": 3000
+    "category": "Nuevo",
+    "type": "Postre",
+    "price": "3000"
   }
 ]

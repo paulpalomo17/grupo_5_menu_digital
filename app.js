@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+const cookies = require('cookie-parser');
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const userSessionMiddleware = require('./middlewares/userSessionMiddleware')
@@ -10,6 +11,7 @@ const publicPath =  path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
 app.use(session( {secret: "Mensaje secreto", resave: false, saveUninitialized: false}));
+app.use(cookies());
 app.use(userSessionMiddleware);
 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE

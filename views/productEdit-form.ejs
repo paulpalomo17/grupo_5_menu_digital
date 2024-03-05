@@ -13,7 +13,7 @@
             <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="create-form" id="create-form"> 
                 <div class="control-form">
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" minlength="3" maxlength="20" class="control" placeholder="Ej: Pizza doble queso" value="<%= productToEdit.name %>"> 
+                    <input type="text" name="name" id="name" class="control" placeholder="Ej: Pizza doble queso" value="<%= productToEdit.name %>"> 
                 </div>
                 <div class="control-form">
                     <label for="description">Descripción</label>
@@ -26,64 +26,23 @@
                 <div class="control-form">
                     <label for="category">Categoría</label>
                     <select name="category" id="category" class="control">
-                        <% if (productToEdit.category == 'nuevo') { %>
-                            <option value="popular">Populares</option>
-                            <option value="nuevo" selected>Nuevos</option>			
-                        <% } else if (productToEdit.category == 'popular') { %>
-                            <option value="popular" selected>Populares</option>
-                            <option value="nuevo">Nuevos</option>	
-                        <% } else { %>
-                            <option value="">Elegí</option>
-                            <option value="popular">Populares</option>
-                            <option value="nuevo">Nuevos</option>	
+                        <option value="">Elegí</option>
+                        <% let categories = ['Nuevo', 'Popular']%>
+                        <% for( const oneCategory of categories ) { %>
+                            <option value="<%= oneCategory %>" 
+                            <%= (oneCategory === productToEdit.category) ? 'selected' : null %>    
+                            ><%= oneCategory %></option>
                         <% } %>
                     </select>
                 </div>
                 <div class="control-form">
                     <label for="type">Tipo</label>
                     <select name="type" id="type" class="control">
-                        <% if (productToEdit.type == 'pizza') { %>
-                            <option value="pizza" selected>Pizza</option>
-                            <option value="hamburguesa">Hamburguesa</option>
-                            <option value="acompañamiento">Acompañamiento</option>
-                            <option value="comida mexicana">Comida Mexicana</option>
-                            <option value="comida oriental">Comida Oriental</option>
-                            <option value="postre">Postre</option>		
-                        <% } else if (productToEdit.type == 'hamburguesa') { %>
-                            <option value="pizza">Pizza</option>
-                            <option value="hamburguesa" selected>Hamburguesa</option>
-                            <option value="acompañamiento">Acompañamiento</option>
-                            <option value="comida mexicana">Comida Mexicana</option>
-                            <option value="comida oriental">Comida Oriental</option>
-                            <option value="postre">Postre</option>	
-                        <% } else if (productToEdit.type == 'acompañamiento') { %>
-                            <option value="pizza">Pizza</option>
-                            <option value="hamburguesa">Hamburguesa</option>
-                            <option value="acompañamiento" selected>Acompañamiento</option>
-                            <option value="comida mexicana">Comida Mexicana</option>
-                            <option value="comida oriental">Comida Oriental</option>
-                            <option value="postre">Postre</option>	
-                        <% } else if (productToEdit.type == 'comida mexicana') { %>
-                            <option value="pizza">Pizza</option>
-                            <option value="hamburguesa">Hamburguesa</option>
-                            <option value="acompañamiento">Acompañamiento</option>
-                            <option value="comida mexicana" selected>Comida Mexicana</option>
-                            <option value="comida oriental">Comida Oriental</option>
-                            <option value="postre">Postre</option>	
-                        <% } else if (productToEdit.type == 'comida oriental') { %>
-                            <option value="pizza">Pizza</option>
-                            <option value="hamburguesa">Hamburguesa</option>
-                            <option value="acompañamiento">Acompañamiento</option>
-                            <option value="comida mexicana">Comida Mexicana</option>
-                            <option value="comida oriental" selected>Comida Oriental</option>
-                            <option value="postre">Postre</option>
-                        <% } else { %>
-                            <option value="pizza">Pizza</option>
-                            <option value="hamburguesa">Hamburguesa</option>
-                            <option value="acompañamiento">Acompañamiento</option>
-                            <option value="comida mexicana">Comida Mexicana</option>
-                            <option value="comida oriental">Comida Oriental</option>
-                            <option value="postre" selected>Postre</option>	
+                        <% let types = ['Pizza', 'Hamburguesa', 'Acompañamiento', 'Comida Mexicana', 'Comida Oriental', 'Postre']%>
+                        <% for( const oneType of types ) { %>
+                            <option value="<%= oneType %>" 
+                            <%= (oneType === productToEdit.type) ? 'selected' : null %>    
+                            ><%= oneType %></option>
                         <% } %>
                     </select>
                 </div>
