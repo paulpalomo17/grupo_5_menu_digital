@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Perfil'}) %>
+<body>
+    <!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+    <h1 class="titulo-perfil">Perfil de Usuario</h1>
+    <section class="container-profile">
+        <img src="/images/users/<%= user.image %>" alt="imagen de perfil">
+        <div>
+            <h3>Nombre: <%= user.firstName %></h3>
+            <h3>Apellido: <%= user.lastName %></h3>
+            <h3>Email: <%= user.email %></h3>
+            <h3>Categoria: <%= user.category %></h3>
+        </div>
+    </section>
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+</html>

@@ -17,12 +17,14 @@
             <form action="/home" method="POST" id="login-form"> 
                 <button type="submit" class="boton-form">Agregar al carrito</button>
             </form>
-            <div class="box-buttons">
-                <a href="/products/<%= product.id %>/edit">Editar</a>
-                <form action="/products/<%= product.id %> ?_method=DELETE" method="POST">
-                    <button type="submit" class="boton-form-delete">Eliminar</button>
-                </form>
-            </div>
+            <% if (locals.isUserSession && locals.usuarioLogueado.category == "Admin") { %>
+                <div class="box-buttons">
+                    <a href="/products/<%= product.id %>/edit">Editar</a>
+                    <form action="/products/<%= product.id %> ?_method=DELETE" method="POST">
+                        <button type="submit" class="boton-form-delete">Eliminar</button>
+                    </form>
+                </div>
+            <% } %>
         </div>
     </article>
 </body>

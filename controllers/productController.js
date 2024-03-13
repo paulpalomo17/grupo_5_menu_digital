@@ -10,9 +10,22 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productControllers = {
     // List - Listado de todos los productos
     list:(req,res) => {
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.render('productList', {products: products, toThousand});
     },
+    // Search - Busca de productos
+    search: (req, res) => {
+		//Obtener informacion del formulario req.query (GET)
+		let keywords = req.query.keywords.toUpperCase();
+		products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+		//Filtrar array de productos con la palabra buscada
+		let result = products.filter(product => {
+			return product.name.toUpperCase().includes(keywords)
+		})
+
+		res.render('results', { result, keywords, toThousand })
+	},
     // Detail - Detalle de un producto
 	detail: (req, res) => {
         const productBuscado = products.find(product => {

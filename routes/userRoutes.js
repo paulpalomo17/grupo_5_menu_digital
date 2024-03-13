@@ -7,6 +7,7 @@ const router = express.Router()
 
 const userControllers = require('../controllers/userController')
 const loggedMiddleware = require('../middlewares/loggedMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
 
 const validationsRegister = [
     body('firstName')
@@ -59,7 +60,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
-/*** CREATE ONE USER ***/
+/*** CREAR UN USUARIO ***/
 router.get('/register', loggedMiddleware, userControllers.register)
 router.post('/', upload.single('image'), validationsRegister, userControllers.store); 
 
@@ -68,6 +69,9 @@ router.get('/login', loggedMiddleware, userControllers.login)
 
 /*** PROCESAR EL LOGIN ***/
 router.post('/login', validationsLogin, userControllers.loginProcess)
+
+/*** PERFIL DE USUARIO ***/
+router.get('/profile', authMiddleware, userControllers.profile)
 
 /*** LOGOUT ***/
 router.get('/logout', userControllers.logout)

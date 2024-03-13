@@ -7,6 +7,7 @@ const router = express.Router()
 
 const productController = require('../controllers/productController')
 const authMiddleware = require('../middlewares/authMiddleware')
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 const validationsCreateProduct = [
     body('name')
@@ -47,17 +48,18 @@ const upload = multer({ storage })
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productController.list); 
-router.get('/carrito',authMiddleware , productController.carrito)
+router.get('/carrito', authMiddleware, productController.carrito)
+router.get('/search', productController.search);
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productController.detail); 
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', productController.create); 
+router.get('/create', adminMiddleware, productController.create);
 router.post('/', upload.single('image'), validationsCreateProduct, productController.store); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', productController.edit); 
+router.get('/:id/edit', adminMiddleware, productController.edit); 
 router.put('/:id', upload.single('image'), productController.update);
 
 /*** DELETE ONE PRODUCT***/ 

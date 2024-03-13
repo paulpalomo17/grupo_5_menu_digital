@@ -1,3 +1,4 @@
+const { log } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -14,12 +15,14 @@ function userSessionMiddleware(req, res, next){
     })
 
     if(userFromCookie){
+        delete userFromCookie.password;
         req.session.usuarioLogueado = userFromCookie;
     }
 
     if (req.session && req.session.usuarioLogueado){ //consulta si hay en session un usuario logueado
         res.locals.isUserSession = true;
         res.locals.usuarioLogueado = req.session.usuarioLogueado;
+        //console.log(res.locals.usuarioLogueado);
     }
     
     next();

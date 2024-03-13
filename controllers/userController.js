@@ -76,15 +76,16 @@ const userControllers = {
 
         users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         //Recorrido buscando por email
-        const userBuscado = users.find(user => {
+        let userBuscado = users.find(user => {
             return user.email == req.body.email;
         })
 
         if (userBuscado){// Si existe
             let correctPassword = bcrypt.compareSync(req.body.password, userBuscado.password);
             if(correctPassword){
+                delete userBuscado.password;
                 req.session.usuarioLogueado = userBuscado;
-
+                //console.log(req.session.usuarioLogueado);
                 if(req.body.recordar){
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60)}) //guardar la cookie por 1 min
                 }
@@ -108,6 +109,10 @@ const userControllers = {
                 }
             });
         }
+    },
+    //Profile - Perfil de usuario registrado
+    profile: (req,res) => {
+        res.render('userProfile', {user : req.session.usuarioLogueado});
     },
     //Logout - Cerrar session
     logout: (req,res) => {

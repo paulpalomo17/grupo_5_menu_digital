@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Todos los productos'}) %>
+<body>
+    <!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+    <h1>Resultados de la búsqueda: <%= keywords %></h1>
+    <section class="main">
+        <% result.forEach(product => { %>
+            <article class="product">
+                <a class="enlace" href="/products/detail/<%= product.id %>">
+                    <img src="/images/products/<%= product.image %>" alt="imagen de producto">
+                    <div class="produc-atrib-box">
+                        <h5><%= product.name %></h5>
+                        <p class="precio">$ <%= toThousand(product.price) %></p>
+                    </div>
+                </a>
+            </article>
+        <% }) %>
+        <% if (result.length == 0) { %>
+            <div>
+                <h2 class="products-title">No hay productos que coincidan con esa búsqueda</h2>
+            </div>
+        <% } %>
+    </section>
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+</html>

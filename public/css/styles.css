@@ -6,7 +6,7 @@
 
 .main-header {
     background-color: #bb1212;
-    padding: 20px;
+    padding: 15px;
 }
 
 .main-header-top-bar{
@@ -14,6 +14,66 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu-central{
+    width: 50%;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: center;
+}
+  
+.content-navbar{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.content-navbar a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 15px 10px;
+    font-size: 18px;
+    border-bottom: solid 1px var(--gray);
+}
+
+.barra-busqueda{
+    width: 50%;
+    padding-top: 20px;
+    margin: auto;
+    position: relative;
+}
+
+.search{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.search-form_button {
+    position: absolute;
+    right: 1px;
+    top: 24px;
+    height: 50%;
+    background-color: #ffffff;
+    border: none;
+    border-left: solid 1px #ebebeb;
+    cursor: pointer;
+}
+
+.search-form_button .lupa-icon{
+    padding: 5px;
+    color: black;
+}
+
+.products-title{
+    padding: 20px 15px;
+    color: tomato;
 }
 
 .logo{
@@ -26,6 +86,7 @@
     color: white;
     text-align: center;
     justify-content: center;
+    width: 108px;
 }
 
 .login img{
@@ -53,12 +114,17 @@
     text-decoration: none;
 }
 
+.fa-cart-shopping{
+    font-size: 25px;
+}
+
 .menu-vertical{
     position: absolute;
     text-align: end;
     display: none;
     list-style: none;
     background-color: rgba(0, 0, 0, .5);
+    width: 108px;
 }
 
 .menu-horizontal li:hover .menu-vertical{
@@ -79,6 +145,14 @@
 .main-header-top-bar i{
     padding: 5px;
     color: #ebebeb;
+}
+
+.banner {
+    padding: 15px;
+    text-align: center;
+}
+.banner img{
+    width: 90%;
 }
 
 h1{
@@ -526,6 +600,34 @@ table i{
 
 .main-edit-form div{
     margin-bottom: 15px; 
+}
+
+/*perfil*/
+.titulo-perfil{
+    padding-left: 70px;
+}
+
+.container-profile{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: start;
+    justify-content: center;
+}
+
+.container-profile img{
+    width: 30%;
+    border-radius: 100%;
+}
+
+.container-profile div{
+    padding-left: 55px;
+    width: 50%;
+}
+
+.container-profile div h3{
+    font-size: 25px;
+    padding: 15px 0px;
 }
 
 @media (min-width: 361px){ /*tablet*/
