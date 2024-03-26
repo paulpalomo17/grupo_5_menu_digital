@@ -7,6 +7,8 @@ const userSessionMiddleware = require('./middlewares/userSessionMiddleware')
 
 const app = express();
 
+const db = require("./database/models");
+
 const publicPath =  path.resolve(__dirname, './public'); 
 app.use( express.static(publicPath) );
 
@@ -23,6 +25,7 @@ app.use(express.json());
 
 app.listen(3000, () =>{
     console.log('Servidor corriendo en el puerto 3000...');
+    //db.sequelize.sync({ force: true });
 });
 
 const mainRoutes = require('./routes/mainRoutes')

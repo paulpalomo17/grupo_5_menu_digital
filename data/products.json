@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Pizza Margaritaaaaaa",
+    "name": "Pizza Margarita",
     "description": "Nuestra deliciosa pizza margarita esta formada por una masa de pizza napolitana como base y acompañada por 6 ingredientes solamente. Tan sencillo como un poco de tomate, queso mozzarella, albahaca fresca, sal, pimienta negra recién molida y aceite de oliva virgen extra. Es sin duda la pizza más popular.",
     "image": "pizza-margarita.png",
     "category": "Popular",
@@ -96,7 +96,7 @@
     "image": "rollitos-primavera.jpg",
     "category": "Nuevo",
     "type": "Comida Oriental",
-    "price": "3000"
+    "price": 3000
   },
   {
     "id": 12,
