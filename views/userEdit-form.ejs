@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Edicion'}) %>
+<body>
+    <!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+    <section class="main-edit-form">
+        <div class="form">
+            <h2>Formulario de edición de usuario</h2>
+            <!-- Formulario -->
+            <form action="/users/<%= userToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="create-form" id="create-form"> 
+                <div class="control-form">
+                    <label for="firstName">Nombre</label>
+                    <input type="text" name="firstName" id="firstName" class="control" value="<%= userToEdit.first_name %>"> 
+                </div>
+                <div class="control-form">
+                    <label for="lastName">Apellido</label>
+                    <input type="text" name="lastName" id="lastName" class="control" value="<%= userToEdit.last_name %>"> 
+                </div>
+                <div class="control-form">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" class="control" value="<%= userToEdit.email %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="control-form">
+                    <label for="category">Categoría</label>
+                    <select name="category" id="category" class="control">
+                        <% for( const oneCategory of allCategory ) { %>
+                            <option value="<%= oneCategory.id %>" 
+                            <%= (oneCategory.id == userToEdit.category_id) ? 'selected' : null %>    
+                            ><%= oneCategory.name %></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="control-form">
+                    <label for="image">- Seleccionar una imagen para el usuario - </label>
+                    <input type="file" name="image" accept=".jpg, .png">
+                </div>
+                <div class="control-boton">
+                    <button type="submit" class="boton-form">Actualizar Usuario</button>
+                </div>  
+            </form>
+        </div>
+    </section>
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+</html>

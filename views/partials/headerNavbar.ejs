@@ -10,7 +10,7 @@
                 <ul class="content-navbar">
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/products">Todos los Productos</a></li>
-                    <% if (locals.isUserSession && locals.usuarioLogueado.category == "Admin") { %>
+                    <% if (locals.isUserSession && locals.usuarioLogueado.category_id == 1) { %>
                         <li><a href="/products/create">Nuevo Producto</a></li>
                     <% } %>
                 </ul>
@@ -20,7 +20,7 @@
             <% if (locals.isUserSession) { %>                    
                 <li><a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li>
-                    <a class="login" href="#"><img src="/images/users/<%= locals.usuarioLogueado.image %>"> <%= locals.usuarioLogueado.firstName %></a>
+                    <a class="login" href="#"><img src="/images/users/<%= locals.usuarioLogueado.image %>"> <%= locals.usuarioLogueado.first_name %></a>
                     <ul class="menu-vertical">           
                         <li><a href="/users/profile">Mi Perfil</a></li>
                         <li><a href="/users/logout">Logout</a></li>

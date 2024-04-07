@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Edicio'}) %>
+<%- include('partials/head', {title: 'Edicion'}) %>
 <body>
     <!-- Header -->
 	<%- include('partials/headerNavbar') %>
@@ -20,29 +20,27 @@
 					<textarea name="description" id="description" class="control"><%= productToEdit.description %></textarea>
                 </div>
                 <div class="control-form">
-                    <label for="image">Seleccionar una imagen para el producto</label>
+                    <label for="image">- Seleccionar una imagen para el producto - </label>
                     <input type="file" name="image" accept=".jpg, .png">
                 </div>
                 <div class="control-form">
                     <label for="category">Categoría</label>
                     <select name="category" id="category" class="control">
-                        <option value="">Elegí</option>
-                        <% let categories = ['Nuevo', 'Popular']%>
-                        <% for( const oneCategory of categories ) { %>
-                            <option value="<%= oneCategory %>" 
-                            <%= (oneCategory === productToEdit.category) ? 'selected' : null %>    
-                            ><%= oneCategory %></option>
+                        <option value=''>- Seleccione categoria - </option>
+                        <% for( const oneCategory of allCategory ) { %>
+                            <option value="<%= oneCategory.id %>" 
+                            <%= (oneCategory.id == productToEdit.category_id) ? 'selected' : null %>    
+                            ><%= oneCategory.name %></option>
                         <% } %>
                     </select>
                 </div>
                 <div class="control-form">
                     <label for="type">Tipo</label>
                     <select name="type" id="type" class="control">
-                        <% let types = ['Pizza', 'Hamburguesa', 'Acompañamiento', 'Comida Mexicana', 'Comida Oriental', 'Postre']%>
-                        <% for( const oneType of types ) { %>
-                            <option value="<%= oneType %>" 
-                            <%= (oneType === productToEdit.type) ? 'selected' : null %>    
-                            ><%= oneType %></option>
+                        <% for( const oneType of allType ) { %>
+                            <option value="<%= oneType.id %>" 
+                            <%= (oneType.id == productToEdit.type_id) ? 'selected' : null %>    
+                            ><%= oneType.name %></option>
                         <% } %>
                     </select>
                 </div>

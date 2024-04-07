@@ -630,6 +630,19 @@ table i{
     padding: 15px 0px;
 }
 
+.container-profile a{
+    background-color: rgb(53, 43, 189);
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
 @media (min-width: 361px){ /*tablet*/
     .product{
         width: 30%

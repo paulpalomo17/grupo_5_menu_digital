@@ -76,4 +76,8 @@ router.get('/profile', authMiddleware, userControllers.profile)
 /*** LOGOUT ***/
 router.get('/logout', userControllers.logout)
 
+/*** EDITAR UN USUARIO ***/ 
+router.get('/:id/edit', authMiddleware, userControllers.edit);
+router.put('/:id', upload.single('image'), userControllers.update);
+
 module.exports = router

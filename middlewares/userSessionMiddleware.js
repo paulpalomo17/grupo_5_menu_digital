@@ -1,18 +1,25 @@
 const { log } = require('console');
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 
-function userSessionMiddleware(req, res, next){
+async function userSessionMiddleware (req, res, next){
     res.locals.isUserSession = false;
 
-    let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+    //let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
     let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = users.find(user => {
-        return user.email == emailInCookie;
-    })
+    if(!emailInCookie){
+        emailInCookie = null
+    }
+    //let userFromCookie = users.find(user => {return user.email == emailInCookie;})
+    let userFromCookie = await db.User.findOne({
+        where: {
+            email : emailInCookie
+        }
+    });
 
     if(userFromCookie){
         delete userFromCookie.password;

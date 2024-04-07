@@ -53,12 +53,11 @@
                 <div class="control-form">
                     <label for="category">Categoría</label>
                     <select name="category" id="category" class="control">
-                        <option value="">Elegí</option>
-                        <% let categories = ['Member', 'Admin']%>
-                        <% for( const oneCategory of categories ) { %>
-                            <option value="<%= oneCategory %>" 
-                            <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>    
-                            ><%= oneCategory %></option>
+                        <option value=''>- Seleccione categoria - </option>
+                        <% for( const oneCategory of allCategory ) { %>
+                            <option value="<%= oneCategory.id %>" 
+                            <%= locals.oldData && (oneCategory.id == oldData.category) ? 'selected' : null %>    
+                            ><%= oneCategory.name %></option>
                         <% } %>
                     </select>
                     <% if (locals.errors && errors.category) { %>
@@ -68,7 +67,7 @@
                     <% } %>
                 </div>
                 <div class="control-form">
-                    <label for="image">Seleccionar una imagen para el usuario</label>
+                    <label for="image">- Seleccionar una imagen para el usuario - </label>
                     <input type="file" name="image" id="image" accept=".jpg, .png">
                     <% if (locals.errors && errors.image) { %>
                         <div class="text-danger">

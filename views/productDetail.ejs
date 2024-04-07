@@ -17,7 +17,7 @@
             <form action="/home" method="POST" id="login-form"> 
                 <button type="submit" class="boton-form">Agregar al carrito</button>
             </form>
-            <% if (locals.isUserSession && locals.usuarioLogueado.category == "Admin") { %>
+            <% if (locals.isUserSession && locals.usuarioLogueado.category_id == 1) { %>
                 <div class="box-buttons">
                     <a href="/products/<%= product.id %>/edit">Editar</a>
                     <form action="/products/<%= product.id %> ?_method=DELETE" method="POST">

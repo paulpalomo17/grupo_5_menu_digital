@@ -30,7 +30,7 @@
                     <% } %>
                 </div>
                 <div class="control-form">
-                    <label for="image">Seleccionar una imagen para el producto</label>
+                    <label for="image">- Seleccionar una imagen para el producto - </label>
                     <input type="file" name="image" accept=".jpg, .png">
                     <% if (locals.errors && errors.image) { %>
                         <div class="text-danger">
@@ -41,12 +41,11 @@
                 <div class="control-form">
                     <label for="category">Categoría</label>
                     <select name="category" id="category" class="control">
-                        <option value="">Elegí</option>
-                        <% let categories = ['Popular', 'Nuevo']%>
-                        <% for( const oneCategory of categories ) { %>
-                            <option value="<%= oneCategory %>" 
-                            <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %>    
-                            ><%= oneCategory %></option>
+                        <option value=''>- Seleccione categoria - </option>
+                        <% for( const oneCategory of allCategory ) { %>
+                            <option value="<%= oneCategory.id %>" 
+                            <%= locals.oldData && (oneCategory.id == oldData.category) ? 'selected' : null %>    
+                            ><%= oneCategory.name %></option>
                         <% } %>
                     </select>
                     <% if (locals.errors && errors.category) { %>
@@ -58,12 +57,11 @@
                 <div class="control-form">
                     <label for="type">Tipo</label>
                     <select name="type" id="type" class="control">
-                        <option value="">Elegí</option>
-                        <% let types = ['Pizza', 'Hamburguesa', 'Acompañamiento', 'Comida Mexicana', 'Comida Oriental', 'Postre']%>
-                        <% for( const oneType of types ) { %>
-                            <option value="<%= oneType %>" 
-                            <%= locals.oldData && (oneType === oldData.type) ? 'selected' : null %>    
-                            ><%= oneType %></option>
+                        <option value="">- Seleccione tipo - </option>
+                        <% for( const oneType of allType ) { %>
+                            <option value="<%= oneType.id %>" 
+                            <%= locals.oldData && (oneType.id == oldData.type) ? 'selected' : null %>    
+                            ><%= oneType.name %></option>
                         <% } %>
                     </select>
                     <% if (locals.errors && errors.type) { %>
