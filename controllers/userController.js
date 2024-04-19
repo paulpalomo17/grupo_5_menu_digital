@@ -61,7 +61,7 @@ const userControllers = {
                 category_id: req.body.category,
                 image: req.file?.filename || 'default-image-user.png',
             })
-            res.redirect('/')
+            res.redirect('/users/login')
         } catch (error) {
             console.log(error);
         }

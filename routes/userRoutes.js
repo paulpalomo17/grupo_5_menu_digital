@@ -8,6 +8,7 @@ const router = express.Router()
 const userControllers = require('../controllers/userController')
 const loggedMiddleware = require('../middlewares/loggedMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
+const editUserMiddleware = require('../middlewares/editUserMiddleware')
 
 const validationsRegister = [
     body('firstName')
@@ -77,7 +78,7 @@ router.get('/profile', authMiddleware, userControllers.profile)
 router.get('/logout', userControllers.logout)
 
 /*** EDITAR UN USUARIO ***/ 
-router.get('/:id/edit', authMiddleware, userControllers.edit);
+router.get('/:id/edit', editUserMiddleware, userControllers.edit);
 router.put('/:id', upload.single('image'), userControllers.update);
 
 module.exports = router
