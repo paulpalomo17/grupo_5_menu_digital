@@ -643,6 +643,39 @@ table i{
     padding: 10px 20px;
 }
 
+/* Para campos de validacion */
+textarea {
+    resize: none;
+}
+
+.is-valid {
+    color: #198754;
+}
+  
+.is-invalid {
+    color: #842029;
+}
+
+.alert-warning{
+    color:#842029;
+    background-color: #F8D7DA;
+    border-radius: 5px;
+    list-style: none;
+    padding-left: 15px;
+}
+
+.control-form{
+    position: relative;
+}
+
+.control-form .icon-check{
+    position: absolute;
+    font-size: 20px;
+    right: -23px;
+    bottom: 10px;
+    color: green;
+}
+
 @media (min-width: 361px){ /*tablet*/
     .product{
         width: 30%

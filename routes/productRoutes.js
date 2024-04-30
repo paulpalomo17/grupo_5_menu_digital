@@ -11,13 +11,15 @@ const adminMiddleware = require('../middlewares/adminMiddleware')
 
 const validationsCreateProduct = [
     body('name')
-        .notEmpty().withMessage('Tienes que escribir un nombre'),
+        .notEmpty().withMessage('Tienes que escribir un nombre').bail()
+        .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
     body('description')
-        .notEmpty().withMessage('Tienes que escribir una descripción'),
+        .notEmpty().withMessage('Tienes que escribir una descripción').bail()
+        .isLength({ min: 20 }).withMessage('El nombre debe tener al menos 20 caracteres'),
     body('image')
         .custom((value, { req }) => {
             let file = req.file;
-            let acceptedExtensions = ['.jpg', '.png'];
+            let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
             if(file){
                 let fileExtension = path.extname(file.originalname);
                 if(!acceptedExtensions.includes(fileExtension)){
@@ -60,7 +62,7 @@ router.post('/', upload.single('image'), validationsCreateProduct, productContro
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', adminMiddleware, productController.edit); 
-router.put('/:id', upload.single('image'), productController.update);
+router.put('/:id', upload.single('image'), validationsCreateProduct, productController.update);
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', productController.delete);

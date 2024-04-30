@@ -13,22 +13,22 @@ const editUserMiddleware = require('../middlewares/editUserMiddleware')
 const validationsRegister = [
     body('firstName')
         .notEmpty().withMessage('Tienes que escribir un nombre').bail()
-        .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
+        .isLength({ min: 2 }).withMessage('El nombre debe tener al menos 2 caracteres'),
     body('lastName')
         .notEmpty().withMessage('Tienes que escribir un apellido').bail()
-        .isLength({ min: 5 }).withMessage('El apellido debe tener al menos 5 caracteres'),
+        .isLength({ min: 2 }).withMessage('El apellido debe tener al menos 2 caracteres'),
     body('email')
         .notEmpty().withMessage('Tienes que escribir un correo').bail()
         .isEmail().withMessage('Debes escribir un formato de correo válido'),
     body('password')
         .notEmpty().withMessage('Tienes que escribir una contraseña').bail()
-        .isLength({ min: 8 }).withMessage('La contraseña debe tener almenos 8 caracteres'),
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres'),
     body('category')
         .notEmpty().withMessage('Tienes que elegir una categoria'),
     body('image')
         .custom((value, { req }) => {
             let file = req.file;
-            let acceptedExtensions = ['.jpg', '.png'];
+            let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
             if(file){
                 let fileExtension = path.extname(file.originalname);
                 if(!acceptedExtensions.includes(fileExtension)){

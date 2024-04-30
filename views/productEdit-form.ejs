@@ -11,19 +11,40 @@
             <h2>Formulario de edición de producto</h2>
             <!-- Formulario -->
             <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="create-form" id="create-form"> 
-                <div class="control-form">
+                <div class="control-form group-name">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" id="name" class="control" placeholder="Ej: Pizza doble queso" value="<%= productToEdit.name %>"> 
+                    <i></i>
+                    <ul class="erroresName"></ul> 
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                            <%= errors.name.msg %>
+                        </div>
+                    <% } %>
                 </div>
-                <div class="control-form">
+                <div class="control-form group-description">
                     <label for="description">Descripción</label>
 					<textarea name="description" id="description" class="control"><%= productToEdit.description %></textarea>
+                    <i></i>
+                    <ul class="erroresDescription"></ul>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="text-danger">
+                            <%= errors.description.msg %>
+                        </div>
+                    <% } %>
                 </div>
-                <div class="control-form">
+                <div class="control-form group-image">
                     <label for="image">- Seleccionar una imagen para el producto - </label>
-                    <input type="file" name="image" accept=".jpg, .png">
+                    <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png, .gif">
+                    <i></i>
+                    <ul class="erroresImage"></ul>
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="text-danger">
+                            <%= errors.image.msg %>
+                        </div>
+                    <% } %>
                 </div>
-                <div class="control-form">
+                <div class="control-form group-category">
                     <label for="category">Categoría</label>
                     <select name="category" id="category" class="control">
                         <option value=''>- Seleccione categoria - </option>
@@ -33,8 +54,9 @@
                             ><%= oneCategory.name %></option>
                         <% } %>
                     </select>
+                    <i></i>
                 </div>
-                <div class="control-form">
+                <div class="control-form group-type">
                     <label for="type">Tipo</label>
                     <select name="type" id="type" class="control">
                         <% for( const oneType of allType ) { %>
@@ -43,10 +65,24 @@
                             ><%= oneType.name %></option>
                         <% } %>
                     </select>
+                    <i></i>
+                    <ul class="erroresType"></ul>
+                    <% if (locals.errors && errors.type) { %>
+                        <div class="text-danger">
+                            <%= errors.type.msg %>
+                        </div>
+                    <% } %>
                 </div>
-                <div class="control-form">
+                <div class="control-form group-price">
                     <label for="price">Precio</label>
                     <input type="text" id="price" name="price" placeholder="Ej: 5678" class="control" value="<%= productToEdit.price %>">
+                    <i></i>
+                    <ul class="erroresPrice"></ul>
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="text-danger">
+                            <%= errors.price.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="control-boton">
                     <button type="submit" class="boton-form">Actualizar producto</button>
@@ -57,5 +93,7 @@
     <!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/validateProductEdit.js"></script>
 </body>
 </html>

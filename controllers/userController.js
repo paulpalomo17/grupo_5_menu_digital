@@ -95,7 +95,7 @@ const userControllers = {
                     req.session.usuarioLogueado = userBuscado;
                     //console.log(req.session.usuarioLogueado);
                     if(req.body.recordar){
-                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60)*1}) //guardar la cookie por 1 min
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60)*60}) //guardar la cookie por 1 min
                     }
                     //return res.json(userBuscado);
                     return res.redirect('/')

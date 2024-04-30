@@ -101,6 +101,17 @@ const productControllers = {
 	// Update - Metodo de edicion de un producto
 	update: async (req, res) => {
 		try {
+			//Validaciones de campos
+			const Validation = validationResult(req);
+			console.log("valor del campo imagen: " + req.body.image);
+			if (Validation.errors.length > 0){ // Si hay errores
+				let productBuscado = await db.Product.findByPk(req.params.id)
+				let allCategory = await db.Category_product.findAll();
+				let allType = await db.Type.findAll();
+				return res.render('productEdit-form', {productToEdit : productBuscado, allCategory, allType,
+					errors : Validation.mapped()
+				});
+			}
 			//Buscamos el producto a editar con ese id
 			let productEdit = await db.Product.findByPk(req.params.id)
 			
