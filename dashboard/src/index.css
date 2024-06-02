@@ -1,0 +1,31 @@
+/* Estilos para la paginación */
+.pagination {
+  margin-top: 20px;
+  text-align: center !important;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 4px;
+  color: #007bff !important;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #007bff;
+  color: white !important;
+}
+
+.pagination .active {
+  background-color: #007bff;
+  color: white !important;
+  pointer-events: none; /* Desactiva el clic en el enlace activo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega sombreado a la página actual */
+}

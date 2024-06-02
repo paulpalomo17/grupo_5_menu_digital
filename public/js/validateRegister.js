@@ -224,9 +224,10 @@ window.addEventListener('load', function() {
                 title: "Se guardo correctamente!",
                 icon: "success",
                 showConfirmButton: false,
-                timer: 50000
             });
-            formulario.submit(); //Reanudamos el evento del submit.
+            setTimeout(function () {
+                formulario.submit(); //Reanudamos el evento del submit.
+            }, 2000);
         }else{
             Swal.fire({
                 icon: "error",
